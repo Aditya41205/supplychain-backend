@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity 0.8.28;
 
 contract SupplyChain {
     
@@ -114,7 +114,7 @@ contract SupplyChain {
         emit ProductOwnershipTransferred(id, previousOwner, to, product.status);
     }
 
-    // Get product status based on role
+    
     function getStatusForRole(Role role) internal pure returns (string memory) {
         if (role == Role.Manufacturer) return "Under Production";
         if (role == Role.Distributor) return "In Distribution";
